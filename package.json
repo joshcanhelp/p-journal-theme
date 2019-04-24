@@ -1,0 +1,22 @@
+{
+  "name": "tailwind-prod-journal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/parcel screen-*.html",
+    "build": "./node_modules/.bin/parcel build screen-*.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "parcel-bundler": "^1.12.3",
+    "postcss-nested": "^4.1.2",
+    "postcss-simple-vars": "^5.0.2",
+    "sass": "^1.19.0",
+    "tailwindcss": "^1.0.0-beta.5"
+  }
+}

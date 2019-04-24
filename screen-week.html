@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>This Week</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link href="./css/master.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container mx-auto p-2 sm:p-6">
+      <h1 class="page-title">This Week</h1>
+
+      <p class="mb-6">
+        <a href="/screen-history.html" class="nav-link">← History</a>
+      </p>
+
+      <a class="day-listing" href="/screen-today.html">
+        <h2 class="day-listing__date"><strong>Today</strong><br>2019-04-20</h2>
+
+        <div class="day-listing__attr">
+          <span class="pill pill--pink">
+            <span class="pill__left">Tasks</span>
+            <span class="pill__right">5</span>
+          </span>
+        </div>
+
+        <div class="day-listing__attr">
+          <span class="pill pill--pink">
+            <span class="pill__left">Pomos</span>
+            <span class="pill__right">12</span>
+          </span>
+        </div>
+
+        <div class="day-listing__attr">
+          <span class="pill pill--pink">
+            <span class="pill__left">Productivity</span>
+            <span class="pill__right">89%</span>
+          </span>
+        </div>
+      </a>
+
+      <a class="day-listing flex md:flex-row flex-col" href="/screen-tomorrow.html">
+        <h2 class="day-listing__date"><strong>Wed</strong><br>2019-04-21</h2>
+
+        <div class="day-listing__attr">
+          <span class="pill pill--green">
+            <span class="pill__left">Tasks</span>
+            <span class="pill__right">4</span>
+          </span>
+        </div>
+
+        <div class="day-listing__attr"></div>
+
+        <div class="day-listing__attr"></div>
+      </a>
+
+      <a class="day-listing flex md:flex-row flex-col" href="/screen-tomorrow.html">
+        <h2 class="day-listing__date"><strong>Thurs</strong><br>2019-04-22</h2>
+
+        <div class="day-listing__attr">
+          <span class="pill pill--green">
+            <span class="pill__left">Tasks</span>
+            <span class="pill__right">7</span>
+          </span>
+        </div>
+
+        <div class="day-listing__attr"></div>
+
+        <div class="day-listing__attr"></div>
+      </a>
+
+    </div>
+  </body>
+  <script src="./js/index.js"></script>
+</html>

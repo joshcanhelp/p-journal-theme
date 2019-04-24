@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+
+body {
+  @apply bg-gray-200 text-black
+}
+
+.container {
+   @apply mx-auto p-2
+}
+
+@media (min-width: 576px) {
+  .container {
+     @apply p-6
+  }
+}
+
+.page-title {
+  @apply mb-2 text-base uppercase tracking-wide font-bold
+}
+
+.nav-link {
+  @apply text-sm text-blue-600 no-underline;
+
+  &:hover {
+    @apply underline
+  }
+}
+
+.card {
+  @apply p-4 bg-white rounded-sm text-black mb-4 shadow;
+}
+
+.day-listing {
+  @apply card cursor-pointer block no-underline flex flex-col;
+
+  &:hover {
+    @apply shadow-lg;
+  }
+
+  &__date {
+    @apply flex-1 text-sm uppercase tracking-wide p-1 leading-tight;
+  }
+
+  &__attr {
+    @apply flex-1 px-6 text-center;
+  }
+}
+
+@media (min-width: 768px) {
+  .day-listing {
+    @apply flex flex-row;
+  }
+}
+
+.pill {
+  @apply block rounded-lg flex flex-row bg-gray-400;
+
+  &__left {
+    @apply bg-white flex-1 p-2 text-sm rounded-lg bg-gray-300;
+  }
+
+  &__right {
+    @apply flex-1 p-2 font-extrabold;
+  }
+
+  &--pink {
+    @apply bg-pink-300;
+
+    .pill__left {
+      @apply bg-pink-200;
+    }
+  }
+
+  &--green {
+    @apply bg-green-300;
+
+    .pill__left {
+      @apply bg-green-200
+    }
+  }
+}
+
+@tailwind utilities;
