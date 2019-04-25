@@ -31,27 +31,40 @@ body {
   @apply p-4 bg-white rounded-sm text-black mb-4 shadow;
 }
 
+.flexy {
+  @apply flex flex-col;
+
+  > * {
+    @apply flex-1;
+  }
+}
+
 .day-listing {
-  @apply card cursor-pointer block no-underline flex flex-col;
+  @apply card cursor-pointer block no-underline;
 
   &:hover {
     @apply shadow-lg;
   }
 
   &__date {
-    @apply flex-1 text-sm uppercase tracking-wide p-1 leading-tight;
+    @apply text-sm uppercase tracking-wide p-1 leading-tight;
   }
 
   &__attr {
-    @apply flex-1 px-6 text-center;
+    @apply px-0 py-1 text-center;
   }
 }
 
 @media (min-width: 768px) {
-  .day-listing {
+  .day-listing__attr {
+    @apply px-6 py-0;
+  }
+
+  .flexy {
     @apply flex flex-row;
   }
 }
+
 
 .pill {
   @apply block rounded-lg flex flex-row bg-gray-400;
@@ -78,6 +91,22 @@ body {
     .pill__left {
       @apply bg-green-200
     }
+  }
+}
+
+.task {
+  @apply py-2;
+
+  &__name {
+    @apply leading-tight text-xl;
+  }
+
+  &__ctrl {
+    @apply pl-12;
+  }
+
+  &:first-child .task__name {
+    @apply text-3xl;
   }
 }
 
