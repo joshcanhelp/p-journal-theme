@@ -2,16 +2,16 @@
 @tailwind components;
 
 body {
-  @apply bg-gray-200 text-black
+  @apply bg-gray-200 text-black;
 }
 
 .container {
-   @apply mx-auto p-2
+   @apply mx-auto p-2;
 }
 
-@media (min-width: 576px) {
+@media (min-width: theme('screens.sm')) {
   .container {
-     @apply p-6
+    @apply p-6;
   }
 }
 
@@ -35,12 +35,22 @@ body {
   @apply flex flex-col;
 
   > * {
-    @apply flex-1;
+    @apply flex-initial w-full;
+  }
+}
+
+@media (min-width: theme('screens.md')) {
+  .flexy {
+    @apply flex-row items-center;
+
+    > * {
+      @apply flex-1;
+    }
   }
 }
 
 .day-listing {
-  @apply card cursor-pointer block no-underline;
+  @apply card cursor-pointer no-underline;
 
   &:hover {
     @apply shadow-lg;
@@ -51,17 +61,13 @@ body {
   }
 
   &__attr {
-    @apply px-0 py-1 text-center;
+    @apply px-0 py-1 text-center block;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: theme('screens.md')) {
   .day-listing__attr {
     @apply px-6 py-0;
-  }
-
-  .flexy {
-    @apply flex flex-row;
   }
 }
 
@@ -95,18 +101,57 @@ body {
 }
 
 .task {
-  @apply py-2;
+  @apply py-6;
 
   &__name {
     @apply leading-tight text-xl;
   }
 
   &__ctrl {
-    @apply pl-12;
+    @apply text-left pt-6;
   }
 
   &:first-child .task__name {
     @apply text-3xl;
+  }
+}
+
+@media (min-width: theme('screens.md')) {
+  .task__ctrl {
+    @apply text-right pr-12;
+  }
+}
+
+.time-field {
+  @apply border border-gray-300 inline-block text-lg py-1 px-3 w-24;
+}
+
+.time-label {
+  @apply inline-block text-sm uppercase font-semibold;
+}
+
+.completed-svg {
+  @apply fill-current text-gray-400 cursor-pointer;
+
+  &:hover {
+    @apply text-green-500;
+  }
+
+  &.done {
+    @apply text-green-500;
+  }
+}
+
+button {
+  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+
+  &:before {
+    content: "[+]";
+    @apply inline-block mr-4;
+  }
+
+  &:hover {
+    @apply bg-blue-700;
   }
 }
 
